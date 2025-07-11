@@ -38,7 +38,7 @@ const Hero = () => {
                         <label htmlFor='pickup-date'>Return Date</label>
                         <input type='date' id='pickup-date' min={new Date().toISOString().split('T')[0]} className='text-sm text-gray-500' required />
                     </div>
-                    
+
                     {/* search button */}
                     <button className='flex items-center jsutify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
                         <img src={assets.search_icon} alt='search' className='brightness-300' />
