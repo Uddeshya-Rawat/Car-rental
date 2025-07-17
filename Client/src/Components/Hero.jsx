@@ -18,7 +18,7 @@ const Hero = () => {
 
                         {/* select city options */}
                         <select required value={pickupLocation} onChange={(e) => setPickupLocation(e.target.value)} className='border-none ring-0'>
-                            <options value=''>Pickup Location</options>
+                            <option >Pickup Location</option>
                             {cityList.map((city, index) => (
                                 <option value={city} key={index}>{city}</option>
                             ))}

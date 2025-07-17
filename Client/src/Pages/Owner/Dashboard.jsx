@@ -8,7 +8,7 @@ const Dashboard = () => {
   const userData = dummyDashboardData
   return (
     <>
-      <div className='flex flex-row gap-4 '>
+      <div className='flex flex-row gap-4  w-full'>
 
         {/* main section */}
         <div className='pl-10 pt-10 w-full p-5'>

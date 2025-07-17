@@ -16,7 +16,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className='w-full md:w-60 px-5 py-4 md:px-6 md:py-8  md:border-r md:border-borderColor h-screen flex flex-col'>
+        <div className='w-full md:w-60 px-5 py-4 md:px-6 md:py-8  md:border-r md:border-borderColor min-h-screen flex flex-col '>
             <div className={`flex gap-4 md:gap-2 mt-10 items-center py-2 px-1 rounded-lg hover:cursor-pointer  ${path=='/owner/dashboard'?'bg-blue-200 border-l-4 border-blue-500':""}`}  onClick={()=>navigate('/owner/dashboard')}>
                 <img src={assets.dashboardIconColored} />
                 <p>Dashboard</p>

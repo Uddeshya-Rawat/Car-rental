@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { assets } from '../assets/CarRental-assets/assets/assets'
+import React, { useEffect, useState } from 'react'
+import { assets, dummyUserData } from '../assets/CarRental-assets/assets/assets'
 import { Link, useLocation, useNavigate } from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
     const [open, setOpen] = useState(false)
     const navigate = useNavigate()
@@ -12,6 +12,20 @@ const Navbar = () => {
         { name: "Cars", path: "/cars" },
         { name: "My Bookings", path: "/myBookings" },
     ]
+
+    const [userData,setUserData]=useState({})
+
+    const fetchUserData=async ()=>{
+        setUserData(dummyUserData)
+    }
+
+    useEffect(()=>{
+        fetchUserData()
+    },[])
+
+    
+    
+  
 
 
     const location = useLocation()
@@ -45,12 +59,14 @@ const Navbar = () => {
                     <img src={assets.search_icon} alt='search' />
                 </div>
 
-                {/* dashboard button */}
+                {/* dashboard button and login  */}
                 <div className='flex gap-6 sm:items-center items-start max-sm:flex-col '>
                     <button className='cursor-pointer'
                         onClick={() => navigate("/owner/dashboard")}>Dashboard</button>
-                    <button className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg'
-                        onClick={() => navigate("/login")}>Login</button>
+                        <button className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg'
+                        
+                        onClick={()=>setShowLogin(true)}>Login</button>
+                    
                 </div>
 
             </div>
