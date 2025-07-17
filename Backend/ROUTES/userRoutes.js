@@ -7,5 +7,7 @@ UserRouter.post('/register',register)
 
 UserRouter.post('/login',login)
 
+UserRouter.get('/userData')
+
 
 module.exports=UserRouter
